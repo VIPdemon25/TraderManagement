@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class HoldingsDTO {
     private String holdingId; // Match with Holdings entity
     private String accountId;
-    private String stockId;
+    private int stockId;
     private double boughtAt;
     private double soldAt;
     private int numShares;
@@ -20,10 +20,8 @@ public class HoldingsDTO {
     private double stopLoss;
     private String typeOfPurchase;
     private String typeOfSell;
-    public HoldingsDTO(String holdingId, String accountId, String stockId, int numShares) {
-        this.holdingId = holdingId;
-        this.accountId = accountId;
-        this.stockId = stockId;
-        this.numShares = numShares;
-    }
+    private String symbol;
+    private double openPrice;
+    private double lastPrice;
+    
 }
